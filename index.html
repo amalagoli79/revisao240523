@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <form onsubmit="enviarEmail(event)">
+            <div class="campo-label">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="campo-email" placeholder="Ex.: email@email.com">
+            </div>
+            <div class="campo-label">
+                <label for="senha">Senha</label>
+                <input type="password" name="password" id="senha" placeholder="Sua senha aqui">
+            </div>
+            
+            <button>Fazer Login</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+    <script type="text/javascript">
+        let email = document.getElementById("campo-email");
+        let senha = document.getElementById("senha");
+
+        function enviarEmail(event) {
+            let emailDigitado = email.value;
+            let senhaDigitada = senha.value;
+            console.log(emailDigitado);
+            console.log(senhaDigitada);
+            event.preventDefault();
+        }
+    </script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        main {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        form {
+            width: 40%;
+            max-width: 500px;
+            height: 400px;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #1E1C21;
+        }
+
+        .campo-label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, button {
+            height: 35px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        input {
+            margin-bottom: 2rem;
+            text-indent: 5px;
+        }
+
+        button {
+            background-color: #C31616;
+            color: white;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+
+</html>
